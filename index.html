@@ -1,0 +1,691 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Godswar Damage Calculator 2016</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto|Play' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+
+    <script type="text/javascript">
+        function zoom() {
+            document.body.style.zoom = "85%" 
+        }
+    </script>
+
+
+    <body style="background: url(img/gw.jpg) no-repeat center center fixed; -webkit-background-size: cover;
+                  -moz-background-size: cover;
+                  -o-background-size: cover;
+                  background-size: cover; " onload="zoom()" >
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-3">
+                
+                <br>
+                <div class="well" style="background-color:#2ECC71;color:#fff;opacity:0.9;padding:5px;"><center>ATTACKER</center></div>
+
+        <div class="jumbotron" style="padding:10px;margin:0px;border-radius:0px;background-color:#2ECC71;border:2px solid #fff;opacity:0.9;">
+
+        <table width="100%" border="0">
+            <tr>
+                <td width="50%"><b>CLASS</b></td>
+                <td> 
+
+                    <select class="form-control" id="class" style="width:100%;">
+        
+        <option   > </option>        
+        <option id="W" selected="True" >Warrior</option>
+        <option id="C">Champion</option>
+        <option id="M">Mage</option>
+        <option id="P">Priest</option>
+
+        </select>
+                </td>
+            </tr>
+        </table>
+
+       
+        </div>
+
+        </p>
+
+        <div class="jumbotron" style="padding:10px;margin:0px;border-radius:0px;background-color:#2ECC71;border:2px solid #fff;opacity:0.9;">
+
+        <table width="100%" border="0">
+            <tr>
+                <td width="50%"><b>ATTACK</b></td>
+                <td> <input type="text" id="attack" value="5690" class="form-control" ></td>
+            </tr>
+             <tr>
+                <td width="50%"><b>DAMAGE %</b></td>
+                <td><input type="text" id="damage" value="0.56" class="form-control"></td>
+            </tr>
+        </table>
+
+        
+        
+            
+        </div>
+        </p>
+
+        <div class="jumbotron" style="padding:5px;margin:0px;border-radius:0px;background-color:#2ECC71;border:2px solid #fff;opacity:0.9;">
+
+
+         <table width="100%" border="0">
+            <tr>
+                <td width="50%"><b>SKILL</b></td>
+                <td>
+                     <select class="form-control" id="skill" style="width:100%;">
+        
+        <option   >  </option>        
+        <option  value ="wLC" >Light Chop</option>
+        <option  value ="wWW" >Whirlwind</option>
+        <option  value ="wFC" selected="True" >Flash Chop</option>
+        <option  value ="wSS" >Sword Storm</option>
+        <option  value ="wSR" >Steel Rain</option>
+        <option  value ="wBC" >Blood Claw</option>
+        <option  value ="wRC" >Rage Claw</option>
+        
+        </select>
+                </td>
+            </tr>
+             <tr>
+                <td width="50%"><b>LEVEL</b></td>
+                <td>
+                   <select class="form-control" id="skill_level" style="width:100%;">
+            
+            <option   > </option>  
+            <option value ="1">1</option>
+            <option value ="2">2</option>
+            <option value ="3">3</option>
+            <option value ="4" selected="True" >4</option>
+            <option value ="5">5</option>
+
+
+        </select> 
+                </td>
+            </tr>
+        </table>
+
+
+        </div>
+
+        </p>
+        
+        <div class="jumbotron" style="padding:5px;margin:0px;border-radius:0px;background-color:#2ECC71;border:2px solid #fff;opacity:0.9;">
+        <center><b>ZODIAC <span style="color:green">[ATTACK]</span></b></center>
+        <table width="100%" border="0">
+            <tr>
+                <td width="50%"><h6>IMPROVEMENT BY  % </h6></td>
+                <td>
+                    
+                    <select class="form-control" id="improve">
+
+            <option value="0" selected="True"></option>
+            <option value="0.02">Level 1</option>
+            <option value="0.04">Level 2</option>
+            <option value="0.06">Level 3</option>
+            <option value="0.08">Level 4</option>
+            <option value="0.1">Level 5</option>
+            <option value="0.12">Level 6</option>
+            <option value="0.14">Level 7</option>
+            <option value="0.16">Level 8</option>
+            <option value="0.18">Level 9</option>
+            <option value="0.20">Level 10</option>
+            <option value="0.23">Level 11</option>
+            <option value="0.26">Level 12</option>
+            <option value="0.29">Level 13</option>
+            <option value="0.32">Level 14</option>
+            <option value="0.35">Level 15</option>
+            <option value="0.40">Level 16</option>
+            <option value="0.45">Level 17</option>
+            <option value="0.50">Level 18</option>
+            <option value="0.55">Level 19</option>
+            <option value="0.60">Level 20</option>
+            <option value="0.62">Level 21</option>
+            <option value="0.64">Level 22</option>
+            <option value="0.66">Level 23</option>
+            <option value="0.68">Level 24</option>
+            <option value="0.7">Level 25</option>
+            <option value="0.72">Level 26</option>
+            <option value="0.74">Level 27</option>
+            <option value="0.76">Level 28</option>
+            <option value="0.78">Level 29</option>
+            <option value="0.8">Level 30</option>
+
+
+        </select> 
+
+                </td>
+            </tr>
+             <tr>
+                <td width="50%"><h6>TRAINING BY VALUE</h6></td>
+                <td>
+                    
+                    <select class="form-control" id="training">
+                    <option value="0" selected="True"></option>
+            <option value="100">Level 1</option>
+            <option value="200">Level 2</option>
+            <option value="300">Level 3</option>
+            <option value="400">Level 4</option>
+            <option value="500">Level 5</option>
+            <option value="600">Level 6</option>
+            <option value="700">Level 7</option>
+            <option value="800">Level 8</option>
+            <option value="900">Level 9</option>
+            <option value="1000">Level 10</option>
+            <option value="1100">Level 11</option>
+            <option value="1200">Level 12</option>
+            <option value="1300">Level 13</option>
+            <option value="1400">Level 14</option>
+            <option value="1500">Level 15</option>
+            <option value="1600">Level 16</option>
+            <option value="1700">Level 17</option>
+            <option value="1800">Level 18</option>
+            <option value="1900">Level 19</option>
+            <option value="2000">Level 20</option>
+            <option value="2100">Level 21</option>
+            <option value="2200">Level 22</option>
+            <option value="2300">Level 23</option>
+            <option value="2400">Level 24</option>
+            <option value="2500">Level 25</option>
+            <option value="2600">Level 26</option>
+            <option value="2700">Level 27</option>
+            <option value="2800">Level 28</option>
+            <option value="2900">Level 29</option>
+            <option value="3000">Level 30</option>
+        </select>
+
+
+                </td>
+            </tr>
+        </table>
+
+        <center>
+
+        </div>
+
+        </p>
+      
+        <div class="jumbotron" style="padding:5px;margin:0px;border-radius:0px;background-color:#2ECC71;border:2px solid #fff;opacity:0.9;">
+
+
+         <table width="100%" border="0">
+            <tr>
+                <td width="50%"><h5 style="color:green">NORMAL DAMAGE</h5></td>
+                <td> <input type="text" class="form-control" id="dResult" ></td>
+            </tr>
+             <tr>
+                <td width="50%"><h5 style="color:red;">CRITICAL DAMAGE</h5></td>
+                <td><input type="text" class="form-control" id="cResult" ></td>
+            </tr>
+        </table>
+
+
+        <center>
+
+        <br>
+        <br>
+
+        <button id="submit" class="btn btn-info btn-sm">CALCULATE</button>
+        <br><br>
+        <input type="checkbox" value=""><b>ENABLE DRILL</b>
+        <br>
+        <br>
+        </center>
+
+        </div>
+
+      
+
+
+                </div>
+
+                <div class="col-md-3">
+                    <br>
+                    <div class="well" style="background-color:#CF000F;color:#fff;opacity:0.9;padding:5px;"><center>DEFENDER</center></div>
+
+<!-- NEED TO RENAME THIS SOON -->
+                <div class="jumbotron" style="padding:10px;margin:0px;border-radius:0px;background-color:#D64541;border:2px solid #fff;opacity:0.9;">
+
+                    <table width="100%" border="0">
+                        <tr>
+                            <td width="50%"><b>CLASS</b></td>
+                            <td> 
+
+                                <select class="form-control" id="class" style="width:100%;">
+                    
+                    <option   > </option>        
+                    <option id="W" selected="True" >Warrior</option>
+                    <option id="C">Champion</option>
+                    <option id="M">Mage</option>
+                    <option id="P">Priest</option>
+
+                    </select>
+                            </td>
+                        </tr>
+                    </table>
+
+       
+                 </div>
+
+               </p>
+
+               <div class="jumbotron" style="padding:10px;margin:0px;border-radius:0px;background-color:#D64541;border:2px solid #fff;opacity:0.9;">
+
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="50%"><b>DEFENSE</b></td>
+                        <td> <input type="text" id="defense" value="3500" class="form-control" ></td>
+                    </tr>
+                     <tr>
+                        <td width="50%"><b>ABSORB</b></td>
+                        <td><input type="text" id="absorb" value="0" class="form-control"></td>
+                    </tr>
+                </table>
+
+        
+        
+            
+        </div>
+        </p>
+
+         <div class="jumbotron" style="padding:5px;margin:0px;border-radius:0px;background-color:#D64541;border:2px solid #fff;opacity:0.9;">
+        <center><b>ZODIAC <span style="color:red;">[DEFENSE]</span></b></center>
+        <table width="100%" border="0">
+            <tr>
+                <td width="50%"><h6>IMPROVEMENT BY  % </h6></td>
+                <td>
+                    
+                    <select class="form-control" id="Dimprove">
+
+             <option value="0" selected="True"></option>
+            <option value="0.02">Level 1</option>
+            <option value="0.04">Level 2</option>
+            <option value="0.06">Level 3</option>
+            <option value="0.08">Level 4</option>
+            <option value="0.1">Level 5</option>
+            <option value="0.12">Level 6</option>
+            <option value="0.14">Level 7</option>
+            <option value="0.16">Level 8</option>
+            <option value="0.18">Level 9</option>
+            <option value="0.20">Level 10</option>
+            <option value="0.23">Level 11</option>
+            <option value="0.26">Level 12</option>
+            <option value="0.29">Level 13</option>
+            <option value="0.32">Level 14</option>
+            <option value="0.35">Level 15</option>
+            <option value="0.40">Level 16</option>
+            <option value="0.45">Level 17</option>
+            <option value="0.50">Level 18</option>
+            <option value="0.55">Level 19</option>
+            <option value="0.60">Level 20</option>
+            <option value="0.62">Level 21</option>
+            <option value="0.64">Level 22</option>
+            <option value="0.66">Level 23</option>
+            <option value="0.68">Level 24</option>
+            <option value="0.7">Level 25</option>
+            <option value="0.72">Level 26</option>
+            <option value="0.74">Level 27</option>
+            <option value="0.76">Level 28</option>
+            <option value="0.78">Level 29</option>
+            <option value="0.8">Level 30</option>
+
+           
+
+        </select> 
+
+                </td>
+            </tr>
+             <tr>
+                <td width="50%"><h6>TRAINING BY VALUE</h6></td>
+                <td>
+                    
+                    <select class="form-control" id="Dtraining">
+                    <option value="0" selected="True"></option>
+            <option value="100">Level 1</option>
+            <option value="200">Level 2</option>
+            <option value="300">Level 3</option>
+            <option value="400">Level 4</option>
+            <option value="500">Level 5</option>
+            <option value="600">Level 6</option>
+            <option value="700">Level 7</option>
+            <option value="800">Level 8</option>
+            <option value="900">Level 9</option>
+            <option value="1000">Level 10</option>
+            <option value="1100">Level 11</option>
+            <option value="1200">Level 12</option>
+            <option value="1300">Level 13</option>
+            <option value="1400">Level 14</option>
+            <option value="1500">Level 15</option>
+            <option value="1600">Level 16</option>
+            <option value="1700">Level 17</option>
+            <option value="1800">Level 18</option>
+            <option value="1900">Level 19</option>
+            <option value="2000">Level 20</option>
+            <option value="2100">Level 21</option>
+            <option value="2200">Level 22</option>
+            <option value="2300">Level 23</option>
+            <option value="2400">Level 24</option>
+            <option value="2500">Level 25</option>
+            <option value="2600">Level 26</option>
+            <option value="2700">Level 27</option>
+            <option value="2800">Level 28</option>
+            <option value="2900">Level 29</option>
+            <option value="3000">Level 30</option>
+        </select>
+
+
+                </td>
+            </tr>
+        </table>
+
+        <center>
+
+        </div>
+
+        </p>
+
+
+
+
+                </div>
+
+                <div class="col-md-3">
+                <br>
+               <div class="well" style="background-color:#9A12B3;color:#fff;padding:5px;" ><center>DRILL [ATTACKER] </center></div>
+
+                <div class="jumbotron" style="padding:10px;margin:0px;border-radius:0px;background-color:#2ECC71;border:2px solid #fff;opacity:0.9;">
+
+                <table width="100%" border="0">
+                    <tr>
+                        <td>
+                        <center>WEAPON</center>
+                        <select class=" ws form-control" id="weaponSLOT1">
+                            <option selected="true">1ST SLOT</option>
+                            <option value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                            <option value="CTD%">CRIT DMG BY %</option>
+                            <option value="CTDV">CRIT DMG BY VAL</option>
+                            <option value="PDMGV">PDMG BY VAL</option>
+                            <option value="MDMGV">MDMG BY VAL</option>
+                            <option value="PDMG%">PDMG BY %</option>
+                            <option value="MDMG%">MDMG BY %</option> 
+                        </select>
+                         <select class="ws form-control" id="weaponSLOT2">
+                            <option selected="true">2ND SLOT</option>
+                            <option value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                            <option value="CTD%">CRIT DMG BY %</option>
+                            <option value="CTDV">CRIT DMG BY VAL</option>
+                            <option value="PDMGV">PDMG BY VAL</option>
+                            <option value="MDMGV">MDMG BY VAL</option>
+                            <option value="PDMG%">PDMG BY %</option>
+                            <option value="MDMG%">MDMG BY %</option> 
+                        </select>
+                         <select class="form-control" id="weaponSLOT3">
+                            <option selected="true" value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                        </select>
+                        <hr>
+                        </td>
+                        <td>
+                        <center>VALUE</center>
+                        <input type="text" id="WS1" value="0" class="form-control" >
+                        <input type="text" id="WS2" value="0" class="form-control" >
+                        <input type="text" id="WS3" value="0" class="form-control" >
+                        <hr>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                        <center>GLOVES</center>
+                         <select class="ws form-control" id="glovesSLOT1">
+                            <option selected="true">1ST SLOT</option>
+                            <option value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                            <option value="CTD%">CRIT DMG BY %</option>
+                            <option value="CTDV">CRIT DMG BY VAL</option>
+                            <option value="PDMGV">PDMG BY VAL</option>
+                            <option value="MDMGV">MDMG BY VAL</option>
+                            <option value="PDMG%">PDMG BY %</option>
+                            <option value="MDMG%">MDMG BY %</option> 
+                        </select>
+                          <select class="ws form-control" id="glovesSLOT2">
+                            <option selected="true">2ND SLOT</option>
+                            <option value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                            <option value="CTD%">CRIT DMG BY %</option>
+                            <option value="CTDV">CRIT DMG BY VAL</option>
+                            <option value="PDMGV">PDMG BY VAL</option>
+                            <option value="MDMGV">MDMG BY VAL</option>
+                            <option value="PDMG%">PDMG BY %</option>
+                            <option value="MDMG%">MDMG BY %</option> 
+                        </select>
+                         <select class="form-control" id="glovesSLOT3">
+                            <option selected="true" value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                        </select>
+                        <hr>
+                        </td>
+                        <td>
+                        <center>VALUE</center>
+                        <input type="text" id="GS1" value="0" class="form-control" >
+                        <input type="text" id="GS2" value="0" class="form-control" >
+                        <input type="text" id="GS3" value="0" class="form-control" >
+                        <hr>
+                    </tr>
+                     <tr>
+                        <td>
+                        <center>HELMET</center>
+                        <select class="ws form-control" id="helmetSLOT1">
+                            <option selected="true">1ST SLOT</option>
+                            <option value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                            <option value="CTD%">CRIT DMG BY %</option>
+                            <option value="CTDV">CRIT DMG BY VAL</option>
+                            <option value="PDMGV">PDMG BY VAL</option>
+                            <option value="MDMGV">MDMG BY VAL</option>
+                            <option value="PDMG%">PDMG BY %</option>
+                            <option value="MDMG%">MDMG BY %</option> 
+                        </select>
+                         <select class="ws form-control" id="helmetSLOT2">
+                            <option selected="true">2ND SLOT</option>
+                            <option value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                            <option value="CTD%">CRIT DMG BY %</option>
+                            <option value="CTDV">CRIT DMG BY VAL</option>
+                            <option value="PDMGV">PDMG BY VAL</option>
+                            <option value="MDMGV">MDMG BY VAL</option>
+                            <option value="PDMG%">PDMG BY %</option>
+                            <option value="MDMG%">MDMG BY %</option> 
+                        </select>
+                         <select class="form-control" id="helmetSLOT3">
+                            <option selected="true" value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                        </select>
+                        <hr>
+                        </td>
+                        <td>
+                        <center>VALUE</center>
+                        <input type="text" id="HS1" value="0" class="form-control" >
+                        <input type="text" id="HS2" value="0" class="form-control" >
+                        <input type="text" id="HS3" value="0" class="form-control" >
+                        <hr>
+                    </tr>
+                     <tr>
+                        <td>
+                        <center>RING 1</center>
+                        <select class="ws form-control" id="ring1SLOT1">
+                            <option selected="true">1ST SLOT</option>
+                            <option value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                            <option value="CTD%">CRIT DMG BY %</option>
+                            <option value="CTDV">CRIT DMG BY VAL</option>
+                            <option value="PDMGV">PDMG BY VAL</option>
+                            <option value="MDMGV">MDMG BY VAL</option>
+                            <option value="PDMG%">PDMG BY %</option>
+                            <option value="MDMG%">MDMG BY %</option> 
+                        </select>
+                         <select class="ws form-control"id="ring1SLOT2" >
+                            <option selected="true">2ND SLOT</option>
+                            <option value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                            <option value="CTD%">CRIT DMG BY %</option>
+                            <option value="CTDV">CRIT DMG BY VAL</option>
+                            <option value="PDMGV">PDMG BY VAL</option>
+                            <option value="MDMGV">MDMG BY VAL</option>
+                            <option value="PDMG%">PDMG BY %</option>
+                            <option value="MDMG%">MDMG BY %</option> 
+                        </select>
+                         <select class="form-control" id="ring1SLOT3">
+                            <option selected="true" value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                        </select>
+                        <hr>
+                        </td>
+                        <td>
+                        <center>VALUE</center>
+                        <input type="text" id="R1S1" value="0" class="form-control" >
+                        <input type="text" id="R1S2" value="0" class="form-control" >
+                        <input type="text" id="R1S3" value="0" class="form-control" >
+                        <hr>
+                    </tr>
+                     <tr>
+                        <td>
+                        <center>RING 2</center>
+                        <select class="ws form-control" id="ring2SLOT1">
+                            <option selected="true">1ST SLOT</option>
+                            <option value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                            <option value="CTD%">CRIT DMG BY %</option>
+                            <option value="CTDV">CRIT DMG BY VAL</option>
+                            <option value="PDMGV">PDMG BY VAL</option>
+                            <option value="MDMGV">MDMG BY VAL</option>
+                            <option value="PDMG%">PDMG BY %</option>
+                            <option value="MDMG%">MDMG BY %</option> 
+                        </select>
+                         <select class="ws form-control"id="ring2SLOT2" >
+                            <option selected="true">2ND SLOT</option>
+                            <option value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                            <option value="CTD%">CRIT DMG BY %</option>
+                            <option value="CTDV">CRIT DMG BY VAL</option>
+                            <option value="PDMGV">PDMG BY VAL</option>
+                            <option value="MDMGV">MDMG BY VAL</option>
+                            <option value="PDMG%">PDMG BY %</option>
+                            <option value="MDMG%">MDMG BY %</option> 
+                        </select>
+                         <select class="form-control" id="ring2SLOT3">
+                            <option selected="true" value="DPF%">DIS PDEF BY %</option>
+                            <option value="DMF%">DIS MDEF BY %</option>
+                        </select>
+                        <hr>
+                        </td>
+                        <td>
+                        <center>VALUE</center>
+                        <input type="text" id="R2S1" value="0" class="form-control" >
+                        <input type="text" id="R2S2" value="0" class="form-control" >
+                        <input type="text" id="R2S3" value="0" class="form-control" >
+                        <hr>
+                    </tr>
+                </table>
+
+        
+        
+            
+        </div>
+        </p>
+
+    </div>
+
+         <div class="col-md-3">
+                <br>
+               <div class="well" style="background-color:#CF000F;color:#fff;padding:5px;" ><center>DRILL [DEFENDER] </center></div>
+
+                <div class="jumbotron" style="padding:10px;margin:0px;border-radius:0px;background-color:#D64541;border:2px solid #fff;opacity:0.9;">
+
+                <table width="100%" border="0">
+                     <tr>
+                        <td>
+                        <center>ARMOR</center>
+                        <select class="ws form-control" id="armorSLOT1">
+                            <option selected="true">1ST SLOT</option>
+                        </select>
+                         <select class="ws form-control"id="armorSLOT2" >
+                            <option selected="true">2ND SLOT</option>
+                        </select>
+                        <hr>
+                        </td>
+                        <td>
+                        <center>VALUE</center>
+                        <input type="text" id="AS1" value="0" class="form-control" >
+                        <input type="text" id="AS2" value="0" class="form-control" >
+                        <hr>
+                    </tr>
+                     
+
+                </table>
+
+        
+        
+            
+        </div>
+        </p>
+
+        
+
+        
+        </div>
+     </div>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        <!-- End content -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/control.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
